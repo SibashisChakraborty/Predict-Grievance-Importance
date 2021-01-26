@@ -29,5 +29,3 @@ We used Catboost, XGBoost, LightGBM, Decision Trees, BaggingClassifier ,Random F
 The best model from xgboost is selected based on a Randomized Search over a parameter distribution.
 
 The best estimator is also saved in the Submissions folder.
-
-From the outcome it is seen that the model overfits the training data and probably is capturing noise, but since this gave us highest accuracy on Training Dataset, I would like to choose this as the final submission
