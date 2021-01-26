@@ -3,7 +3,7 @@ Approach To Solve Problem:
 Fit various classifiers to the data and see what yields the best outcome. The data has mostly categorical variables. We will follow the 'No Free Lunch' theorem. No model can be considered better than the other at the very outset.
 
 
-Feature Engineering:
+Data Cleaning and Feature Engineering:
 
 1. Remove any variable/feature that has greater than 70% missing values. Upon doing that we find one other feature with only 4 missing values and we simply remove those rows from our analysis.
 
