@@ -1,0 +1,33 @@
+Approach To Solve Problem:
+
+Fit various classifiers to the data and see what yields the best outcome. The data has mostly categorical variables. We will follow the 'No Free Lunch' theorem. No model can be considered better than the other at the very outset.
+
+
+Feature Engineering:
+
+1. Remove any variable/feature that has greater than 70% missing values. Upon doing that we find one other feature with only 4 missing values and we simply remove those rows from our analysis.
+
+2. Remove any feature that has Zero Variance, i.e has same values in all rows, hence model will not learn anything from the data.
+
+3. Remove any redundant variables like country.alpha2 etc which has a one-to-one mapping with some other column that we are using in modeling, in the example above it will be country_name
+
+4. Clean column names, replace (-,=,.) in column names with (_) to avoid confusion.
+
+5. Create two features from Issues column, one is whether there was an issue with the complain, and number of issues, hence one is categorical(0/1) and other is numeric ranging between (0-27)
+
+6. One-Hot-Encode all columns that have more than 2 int values(0,1,-1) and also any object column that we are considering as categorical.
+
+7. Apply all these transformations on the submission test set.
+
+8. Compute class weights for Full Training set, this will be used to fit on final model using full training data.
+
+
+Modelling:
+
+We used Catboost, XGBoost, LightGBM, Decision Trees, BaggingClassifier ,Random Forest to train our model, the best one came out to be XGBoost and hence only that is provided in the predictions file.
+
+The best model from xgboost is selected based on a Randomized Search over a parameter distribution.
+
+The best estimator is also saved in the Submissions folder.
+
+From the outcome it is seen that the model overfits the training data and probably is capturing noise, but since this gave us highest accuracy on Training Dataset, I would like to choose this as the final submission
