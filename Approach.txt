@@ -24,8 +24,6 @@ Feature Engineering:
 
 Modeling:
 
-We used Catboost, XGBoost, LightGBM, Decision Trees, BaggingClassifier ,Random Forest to train our model, the best one came out to be XGBoost and hence only that is provided in the predictions file.
+We used Decision Trees, BaggingClassifier ,Random Forest, Catboost, XGBoost, LightGBM to train our model, the best one came out to be XGBoost and hence only that is provided in the predictions file.
 
-The best model from xgboost is selected based on a Randomized Search over a parameter distribution.
-
-The best estimator is also saved in the Submissions folder.
+The best model from xgboost is selected after Hyperparameter tuning based on a Randomized Search over a parameter distribution.
