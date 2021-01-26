@@ -1,6 +1,6 @@
 Approach To Solve Problem:
 
-Fit various classifiers to the data and see what yields the best outcome. The data has mostly categorical variables. We will follow the 'No Free Lunch' theorem. No model can be considered better than the other at the very outset.
+Fit various classifiers to the data and see what yields the best outcome. The data has mostly categorical variables. We will follow the 'No Free Lunch' theorem, meaning that if no prior assumptions are made about the data there is no reason to prefer one model over any other.
 
 
 Data Cleaning and Feature Engineering:
