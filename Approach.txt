@@ -22,7 +22,7 @@ Feature Engineering:
 8. Compute class weights for Full Training set, this will be used to fit on final model using full training data.
 
 
-Modelling:
+Modeling:
 
 We used Catboost, XGBoost, LightGBM, Decision Trees, BaggingClassifier ,Random Forest to train our model, the best one came out to be XGBoost and hence only that is provided in the predictions file.
 
